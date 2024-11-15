@@ -1,0 +1,41 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmet Kerem Memioğlu</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="hakkimda.html">Hakkımda</a></li>
+                <li><a href="projeler.html">Projelerim</a></li>
+            </ul>
+        </nav>
+        <h1>Sayfama Hoşgeldiniz</h1>
+        <p class="subtitle">Ahmet Kerem Memioğlu-Bilgisayar Mühendisi</p>
+        <div id="datetime" class="datetime"></div>
+    </header>
+
+    <section class="contact-section">
+        
+        <form id="contactForm">
+            <h2 class="contact-title">İletişim Formu</h2>
+            <label for="name">İsim:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mesaj:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Gönder</button>
+            <p id="formMessage"></p>
+        </form>
+    </section>
+    
+    <script src="../javascript/script.js"></script>
+</body>
+</html>

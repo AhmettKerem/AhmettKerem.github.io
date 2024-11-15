@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmet Kerem Memioğlu</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="hakkimda.html">Hakkımda</a></li>
+                <li><a href="projeler.html">Projelerim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="projects-section">
+        <h1>Projelerim</h1>
+        <div class="filter-buttons">
+            <button onclick="filterProjects('all')">Projelerimin Hepsi</button>
+            <button onclick="filterProjects('embedded')">Gömülü Sistemler ve IoT(Staj)</button>
+            <button onclick="filterProjects('mobile')">Mobil Uygulamalar(Tübitak)</button>
+            <button onclick="filterProjects('ai')">Yapay Zeka(Teknofest)</button>
+        </div>
+        
+        <div id="projectsList" class="projects-grid">
+            <!-- Gömülü Sistemler ve IoT Projeleri -->
+            <div class="project" data-category="embedded">
+                <img src="../images/stajgömülü4.jpg" alt="ESP32 Projesi" onclick="openModal('../images/stajgömülü4.jpg', 'Şirketin projelerinde kullanılmak üzere tasarlanan ESP32 RAK3172 modülü ile gerçekleştirilen bir takım projesi üzerine yoğunlaştı. Projemiz, P2P haberleşme protokolü ile veri iletişimini ve LoRaWAN ağı üzerinden veri aktarımını kapsayan çeşitli adımları içeriyor. Bu süreçte, sıcaklık, nem ve ivme sensörlerinden alınan veriler üzerine odaklandık ve bu verilerin güvenli aktarımı ile birlikte Chirpstack platformuna gönderilmesini hedefledik.')">
+                <p class="proje-baslik">ESP32 ile Gömülü Sistem Projesi</p>
+            </div>
+            <div class="project" data-category="embedded">
+                <img src="../images/stajgömülü3.jpg" alt="STM32 Projesi" onclick="openModal('../images/stajgömülü3.jpg', 'STM32 kartı ile lojik analizatör kullanımı ve servo ile DC motor kontrolü üzerine çalıştım. İlk olarak, lojik analizatörün ne olduğunu ve nasıl kullanıldığını öğrendim. Lojik analizatör, dijital sinyalleri yakalayan ve bu sinyalleri analiz eden bir cihazdır.')">
+                <p>STM32 ile Gömülü Sistem Projesi</p>
+            </div>
+            
+            <!-- Mobil Uygulamalar -->
+            <div class="project" data-category="mobile">
+                <img src="../images/tübitak1.jpeg" alt="Pharmavent" onclick="openModal('../images/tübitak1.jpeg', 'Sağlık sektöründe kullanıcı dostu bir mobil uygulama olan projenin geliştirilmesine odaklanmaktadır. Bu uygulama, bir dizi önemli özelliği içermektedir. İlaç bilgileri, ilaç stok bilgileri, nöbetçi eczaneler, eczane konumları, ilaç etkileşimleri, reçete hatırlatıcı gibi fonksiyonlarla donatılmış olan Proje, kullanıcıların sağlık ve ilaç bilgilerine kolay ve etkili bir şekilde erişmelerini sağlamaktadır.Projenin temel hedefi, projenin eczaneler ve sağlık kuruluşları ile iş birliği yaparak güncel ilaç bilgilerine ve nöbetçi eczane verilerine anlık erişim sağlamasıdır.')">
+                <p>Pharmavent Mobil Uygulaması</p>
+            </div>
+            
+            <!-- Yapay Zeka Projeleri -->
+            <div class="project" data-category="ai">
+                <img src="../images/eys.jpg" alt="Engelli Yaşam Sistemi" onclick="openModal('../images/eys.jpg', 'Bu proje, başvurduğumuz Engelsiz Yaşam Teknolojileri Yarışması kapsamında, engelli bireylerin iletişim problemlerine yönelik çözümler geliştirmeyi hedeflemektedir. Özellikle işitme ve görme engelli bireylerin iletişim ihtiyaçlarını karşılayacak bir telefon uygulaması geliştirmeyi amaçlıyoruz.')">
+                <p>Yapay Zeka Destekli Engelli Yaşam Sistemi Mobil Uygulaması</p>
+            </div>
+            <!-- Daha fazla proje ekleyebilirsiniz -->
+        </div>
+    </section>
+
+    <!-- Modal Yapısı -->
+    <div id="modal" class="modal" style="display: none;">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="">
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+    
+    <script src="../javascript/script.js"></script>
+</body>
+</html>

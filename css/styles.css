@@ -1,0 +1,417 @@
+/* Genel stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #343434d8;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-image: url('../images/pc2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 10px;  
+    padding: 15px;  
+    background:  transparent;
+    color: white;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.5em;  
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Times New Roman', serif;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: left;  
+    gap: 20px;
+    margin-left: 20px;  
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Times New Roman', sans-serif;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #84d6fc;
+}
+
+.datetime {
+    font-size: 1em;
+    color: #f0f4f8;
+    margin-top: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute; 
+    top: 10px;
+    right: 10px;
+}
+
+/* Form stilleri */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    background: #ffffffc0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+}
+
+form label {
+    color: #093c41;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #4f9da6;
+    outline: none;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #093c41;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+form button:hover {
+    background-color: #093c41;
+}
+
+/* Hakkımda sayfası için özel stiller */
+
+
+.profile-image {
+    width: 150px;  
+    height: 150px;
+    border-radius: 50%;  
+    overflow: hidden;  
+    margin-right: 20px;  
+    margin-bottom: 20px;  
+    float: left;  
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-section {
+    width: 90%;
+    max-width: 800px;
+    background: #ffffffad;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+
+
+.about-section {
+    width: 90%;
+    max-width: 800px;
+    background: #b7b7b7;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.about-section h1 {
+    font-size: 2.5em;
+    color: #20626a;
+    font-family: 'Times New Roman', serif;
+}
+
+.about-section p {
+    margin: 15px 0;
+    font-size: 1.1em;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+.about-section .social-links ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.about-section .social-links a {
+    text-decoration: none;
+    color: #20626a;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+.about-section .social-links a:hover {
+    color: #20626a;
+}
+
+#toggleButton {
+    padding: 10px 20px;
+    font-size: 1em; 
+    background-color: #4f9da6; 
+    color: white;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-family: 'Times New Roman', sans-serif; 
+}
+
+
+
+#toggleButton:active {
+    transform: scale(0.98);
+}
+
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info h2 {
+    font-size: 1.8em;
+    color: #20626a;
+    font-family: 'Times New Roman', serif;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin: 5px 0;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+/* Projeler sayfası için grid düzeni */
+.projects-section {
+    width: 90%;
+    max-width: 1200px;
+    background: #b7b7b7;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.projects-section h1 {
+    font-size: 2.5em;
+    color: #20626a;
+    font-family: 'Times New Roman', serif;
+    margin-bottom: 20px;
+}
+
+/* Kategori butonları için düzenleme */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; 
+}
+
+.filter-buttons button {
+    padding: 10px 20px;
+    background-color: #4f9da6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Times New Roman', sans-serif;
+    white-space: nowrap; 
+    font-size: 1em;
+    min-width: 120px; 
+}
+
+.filter-buttons button:hover {
+    background-color: #00b8a9;
+}
+
+/* Projelerin grid düzeni */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.project img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.project-title {
+    text-align: center; 
+    margin-top: 10px;
+}
+
+.project img:hover {
+    transform: scale(1.05); 
+}
+
+
+/* Modal ve içerik stilleri */
+.modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(173, 216, 230, 0.8); 
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #000; 
+    border-radius: 0; 
+}
+
+.modal img {
+    max-width: 90%; 
+    max-height: 80vh; 
+    margin-bottom: 15px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.modal p {
+    font-size: 1.2em;
+    color: #fff; 
+    text-align: center;
+    padding: 0 20px;
+    max-width: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    z-index: 1001;
+}
+
+@media screen and (max-width: 768px) {
+    .projects-section h1 {
+        font-size: 2em; 
+    }
+
+    .filter-buttons {
+        gap: 10px;
+    }
+
+    .filter-buttons button {
+        font-size: 0.9em;
+        padding: 8px 15px; 
+        min-width: 100px; 
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    }
+
+    .project img {
+        width: 250px;
+        height: 250px; 
+    }
+}
+
+/* Mobile First yaklaşımı */
+@media screen and (max-width: 480px) {
+    .projects-section h1 {
+        font-size: 1.5em; 
+    }
+
+    .filter-buttons {
+        gap: 5px; 
+    }
+
+    .filter-buttons button {
+        font-size: 0.8em; 
+        padding: 6px 12px; 
+        min-width: 80px; 
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .project img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+
